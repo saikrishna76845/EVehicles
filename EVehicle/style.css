@@ -1,0 +1,409 @@
+body {
+    background-color: #0a3338fe;
+    margin-top: 60px;
+}
+
+#menu {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    background-color: rgb(13, 17, 15);
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Center the items vertically */
+    padding: 0 20px; /* Add padding to the left and right */
+    z-index: 1000;
+}
+
+#menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 100px;
+}
+
+#menu li {
+    display: inline-block;
+    margin: 20px;
+}
+
+#menu a {
+    color: #ddd;
+    ;
+    text-decoration: none;
+}
+
+#logo img {
+    height: 60px;
+    text-align: left;
+    margin-left: 10px;
+}
+
+#name {
+    color: rgb(244, 238, 238); /* Light text color */
+    margin-left: 10px; /* Space between logo and name */
+}
+
+#name h2 {
+    font-size: 1.5em;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    margin: 0; /* Remove margin for h2 */
+}
+
+#name p {
+    font-size: 0.8em;
+    /* Slightly smaller font size for description */
+    font-family: 'Roboto', sans-serif;
+    /* Simple and clean font for description */
+    margin-top: 0;
+    /* Slight gap between name and description */
+    color: #ddd;
+    /* Lighter color for the description text */
+}
+
+.slider-container {
+    width: 100%;
+    margin: 5px;
+    overflow: hidden;
+    position: relative;
+    padding: 5px -10px;
+}
+
+/* Image slide container */
+.slider-images {
+    display: flex;
+    width: 100%;
+    animation: slide 8s infinite;
+}
+
+.slider-images img {
+    width: 200%;
+    height: 600px;
+}
+
+.slider-caption {
+    position: absolute;
+    bottom: 20px;
+    /* Position from the bottom of the container */
+    left: 20px;
+    /* Position from the left of the container */
+    /* White text for contrast */
+    font-size: 2em;
+    /* Large text size */
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    /* Shadow for better readability */
+    pointer-events: none;
+    /* Prevent interaction with the text */
+}
+
+/* Keyframes for sliding animation */
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+        /* Start at the first image */
+    }
+
+    50% {
+        transform: translateX(-50%);
+        /* Move to the second image */
+    }
+}
+
+.card-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+    gap: 20px;
+    /* Space between the cards */
+}
+
+/* Individual card styling */
+.card {
+    background-color: #fff;
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Shadow effect */
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    /* Animation effect on hover */
+}
+
+/* Card image styling */
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    /* Make the image cover the card area */
+}
+
+/* Card content */
+.card-content {
+    padding: 15px;
+}
+
+/* Card title */
+.card-title {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Card description */
+.card-description {
+    font-size: 1em;
+    color: #777;
+    margin-bottom: 15px;
+}
+
+/* Button styling */
+.card-button {
+    padding: 10px 0px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+}
+
+/* Hover effects */
+.card:hover {
+    transform: translateY(-10px);
+    /* Lift the card on hover */
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: space-between;
+    /* Position elements on the left and right */
+    align-items: flex-start;
+    /* Align elements at the top */
+    flex-wrap: wrap;
+    /* Allow wrapping for smaller screens */
+}
+
+#contact {
+    background-color: #444;
+    padding: 20px;
+    border-radius: 10px;
+    width: 45%;
+    /* Takes up 45% of the space */
+    box-sizing: border-box;
+}
+
+#contact h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form div {
+    position: relative;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px -10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    font-size: 1em;
+}
+
+input[type="text"]:focus {
+    border-color: #007BFF;
+    /* Highlight border color on focus */
+}
+
+label {
+    position: absolute;
+    top: -15px;
+    left: 10px;
+    font-size: 0.9em;
+    color: #bbb;
+    background-color: #444;
+    padding: 0 5px;
+}
+
+button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 1.1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    background: linear-gradient(45deg, #007BFF, #0056b3);
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05)
+        /* contact us button*/
+}
+
+/* Address Section */
+#address {
+    background-color: #444;
+    padding: 20px;
+    border-radius: 10px;
+    width: 45%;
+    /* Takes up 45% of the space */
+    box-sizing: border-box;
+    text-align: center;
+}
+
+#address h2 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+#address p {
+    font-size: 1.2em;
+    color: #bbb;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    footer {
+
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #contact,
+    #address {
+        width: 90%;
+        /* Make the sections take up 90% on smaller screens */
+        margin-bottom: 20px;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Styling the section container */
+view {
+
+    background-color: #f9f9f9;
+    /* Light background for the section */
+    text-align: center;
+    /* Center align content */
+}
+
+/* Gallery container */
+#gallery {
+    display: grid;
+    /* Use grid layout for the gallery */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    /* Auto columns based on screen size */
+    gap: 15px;
+    /* Space between images */
+    justify-items: center;
+    /* Center images horizontally in each grid cell */
+    padding: 0 10px;
+    /* Some padding around the gallery */
+}
+
+/* Styling individual images */
+#gallery img {
+    width: 100%;
+    /* Ensure images are responsive */
+    height: 400px;
+    /* Maintain aspect ratio */
+    border-radius: 10px;
+    /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow effect */
+    transition: transform 0.3s ease-in-out;
+    /* Smooth zoom effect on hover */
+}
+
+/* Hover effect for images */
+#gallery img:hover {
+    transform: scale(1.05);
+    /* Slight zoom effect */
+}
+
+/* Responsive Design: Adjust layout on smaller screens */
+@media (max-width: 768px) {
+    #gallery {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        /* Adjust number of columns */
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styling for the theory section */
+/* Styling for the sections (theory, how-it-works, benefits, future) */
+.theory,
+.how-it-works,
+.benefits,
+.future {
+    background-color: #0a3338fe;
+    /* White background for the section */
+    padding: 20px;
+    /* Add padding for spacing inside the section */
+    border-radius: 8px;
+    /* Rounded corners for the section */
+    box-shadow: 0 4px 8px rgba(207, 17, 17, 0.1);
+    border-color: #db0a0a;
+    /* Subtle shadow for the section */
+    margin-bottom: 20px;
+    /* Space below the section */
+}
+
+/* Styling for the headings (h2) inside these sections */
+.theory h2,
+.how-it-works h2,
+.benefits h2,
+.future h2 {
+    font-size: 2em;
+    /* Larger font size for the heading */
+    color: #dee6ed;
+    /* Blue color for the heading */
+    margin-bottom: 15px;
+    /* Space below the heading */
+    font-weight: bold;
+    /* Bold font style for emphasis */
+}
+
+/* Styling for paragraphs (p) inside these sections */
+.theory p,
+.how-it-works p,
+.benefits p,
+.future p {
+    font-size: 1.1em;
+    /* Slightly larger text for readability */
+    line-height: 1.6;
+    /* Increase line height for better readability */
+    color: #e7ddddba;
+    /* Dark gray color for the text */
+    margin-bottom: 20px;
+    /* Add space between paragraphs */
+}
